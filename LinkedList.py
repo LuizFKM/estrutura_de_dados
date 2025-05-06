@@ -16,6 +16,13 @@ class Fila:
         else:
             self.tail.next = novo_no
             self.tail = novo_no
+    def dequeue(self):
+        removido = self.head
+
+        if self.head != None:
+            self.head = self.head.next
+            return removido
+
     def show(self):
         aux = self.head
         while aux != None:
